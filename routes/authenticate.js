@@ -111,7 +111,7 @@ router.get('/verify-email',async (req,res)=>{
             res.send("user does not exist or invalid token")
         }
         else{
-            user.emailToken=null;
+            // user.emailToken=null;
             user.isVerified=true;
             user.save()
             .then((userdata)=>{
